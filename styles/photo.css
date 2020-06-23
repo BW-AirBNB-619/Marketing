@@ -10,55 +10,47 @@
 }
 
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html{
-    font-size: 62.5%;
-    font-family: 'Roboto', sans-serif;
-}
-
-body{
-
-    font-size: 1.6rem;
-    margin: 0 auto;
-    color: var(--body-text-color);
-    
-}
-
 /* ----- Nav section ----- */
 
-.main {
-  font-size: 1.6rem;
-  background-color: var(--nav-bk-color);
-  display: block;
-  padding: 0.5rem;
-  display:flex;
-  justify-content: space-between;
-  text-transform: uppercase;
+
+.hero {
+    height: 50rem;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7) ), url("../photo/Asset/hero-bk.jpg");
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.main__title {
-  color: var(--btn-text-color);
-  font-family: 'Domine', sans-serif;
-  font-size: 2rem;
-  letter-spacing: 0.3rem;
-  
+.hero__title{
+    font-size: 3rem;
+    color: var(--title-main-color);
+    padding: 2rem;
+    background-color: #f8f9fa94;
+    text-transform: uppercase;
 }
 
-.main-nav__list {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.gallery {
+    margin: 3rem;
 }
 
-.main-nav__link {
-  text-decoration: none;
-  color: #f8f9faff;
-  margin-left: 8rem;
-  
+.gallery__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.gallery__image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 1rem;
+    opacity: 90%;
+}
+
+.gallery__image:hover {
+    opacity: 100%;
 }

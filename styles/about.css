@@ -71,7 +71,8 @@ body{
     font-size: 1.6rem;
     display: flex;
     height: 50rem;
-    margin: auto 5rem;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9) ), url("../photo/Asset/card-bk.jpg");
+
 
 }
 
@@ -108,7 +109,7 @@ body{
 .card__image {
     max-width: 60%;
     display: block;
-    border-radius: 3px;
+    border-radius: 20px;
     position: absolute;
 }
 
@@ -123,7 +124,7 @@ body{
 .stack {
     display: flex;
     justify-content: space-between;
-    margin: auto 3rem;
+    margin: 5rem 3rem;
 }
 
 .stack__card {
