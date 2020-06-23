@@ -137,6 +137,7 @@ body{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    background-color: var(--title-second-color);
 }
 
 .stack__card__title {
@@ -147,10 +148,6 @@ body{
 .stack__card__body {
     padding: 2rem;
 }
-
-.stack__card__1 {background-color: var(--title-second-color);}
-.stack__card__2 {background-color: var(--title-second-color);}
-.stack__card__3 {background-color: var(--title-second-color);}
 
 .stack__card__image {
     width: 100px;
