@@ -1,0 +1,237 @@
+
+:root {
+    --body-text-color: #212529;
+    --title-main-color: #114B5F;
+    --title-second-color: #028090;
+    --section-bk-color: #E4FDE1;
+    --key-element-color: #F45B69;
+    --nav-bk-color: #456990;
+    --btn-text-color: #f8f9fa;
+}
+
+/* ----- reset ----- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px solid gray; */
+}
+
+html{
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+
+    font-size: 1.6rem;
+    margin: 0 auto;
+    color: var(--body-text-color);
+    
+}
+
+/* ----- Nav section ----- */
+
+.main {
+  font-size: 1.6rem;
+  background-color: var(--nav-bk-color);
+  display: block;
+  padding: 0.5rem;
+  display:flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.main__title {
+  color: var(--btn-text-color);
+  font-family: 'Domine', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.3rem;
+  
+}
+
+.main-nav__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-nav__link {
+  text-decoration: none;
+  color: #f8f9faff;
+  margin-left: 5rem;
+  
+}
+
+/* ----- Card section ----- */
+
+.card {
+    font-size: 1.6rem;
+    display: flex;
+    height: 50rem;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9) ), url("../photo/Asset/card-bk.jpg");
+}
+
+.card__body {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 5rem 0;
+}
+
+.card__title{
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-family: 'Domine', sans-serif;
+    font-weight: 700;
+    color: var(--title-main-color);
+    text-align: center;
+}
+
+.card__action {
+    text-align: center;
+}
+
+.card__copy {
+    padding: 0 5rem;
+    text-align: justify;
+    line-height: 2rem;
+}
+
+.card__figure {
+    position: relative;
+    min-width: 60%;
+}
+
+.card__image {
+    max-width: 60%;
+    display: block;
+    border-radius: 20px;
+    position: absolute;
+}
+
+.card__image__1 {top: 45%; left: 30%; z-index: 18; }
+.card__image__2 {top: 25%; left: 5%; z-index: 15; }
+.card__image__3 {top: 15%; left: 35%; z-index: 10; }
+
+
+
+/* ----- Features section ----- */
+
+.stack {
+    display: flex;
+    justify-content: space-between;
+    margin: 5rem 3rem;
+}
+
+.stack__card {
+    max-width: 30rem;
+    height: 48rem;
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 8px;
+    color: var(--title-main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--section-bk-color);
+}
+
+.stack__card__title {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+
+.stack__card__body {
+    padding: 2rem;
+}
+
+.stack__card__image {
+    width: 150px;
+}
+
+/* ----- sidebar ----- */
+
+.sidebar{
+    margin-top: 5rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar__user {
+    display: flex;
+    align-items: center;
+    width: 70rem;
+}
+
+.sidebar__image {
+    border-radius: 100%;
+}
+
+.sidebar__list {
+    margin: 3rem;
+}
+
+.sidebar__name {
+    text-transform: capitalize;
+    color:var(--title-main-color);
+    font-weight: 400;
+    padding: 1rem 0;
+}
+
+.sidebar__comment {
+    font-style: italic;
+}
+
+/* ----- Footer section -----*/
+
+.footer {
+    background-color: var(--nav-bk-color);
+    color: var(--btn-text-color);
+    background: linear-gradient(222deg, rgba(69,105,144,1) 37%, rgba(29,65,103,0.9962359943977591) 100%);
+}
+
+.footer__container {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__title {
+    padding: 2rem;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: var(--btn-text-color);
+    border: 1px solid var(--btn-text-color);
+    padding: 1rem;
+    border-radius: 10px;
+}
+/* ----- btn ----- */
+
+.button{
+    display:inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    border: 1px solid var(--key-element-color);
+    padding: 1rem 2rem;
+    width: 18rem;
+    border-radius: 4px;
+    color: var(--btn-text-color);
+    background-color: var(--key-element-color);
+    text-align: center;
+}
+
+.button--se{
+    background-color: var(--section-bk-color);
+}
+

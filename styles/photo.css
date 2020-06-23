@@ -1,0 +1,58 @@
+
+:root {
+    --body-text-color: #212529;
+    --title-main-color: #114B5F;
+    --title-second-color: #028090;
+    --section-bk-color: #E4FDE1;
+    --key-element-color: #F45B69;
+    --nav-bk-color: #456990;
+    --btn-text-color: #f8f9fa;
+}
+
+
+/* ----- Nav section ----- */
+
+
+.hero {
+    height: 50rem;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.9) ), url("../photo/Asset/hero-bk.jpg");
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero__title{
+    font-size: 3rem;
+    color: var(--title-main-color);
+    padding: 2rem;
+    background-color: #f8f9fa94;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.gallery {
+    margin: 3rem;
+}
+
+.gallery__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.gallery__image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 1rem;
+    opacity: 90%;
+}
+
+.gallery__image:hover {
+    opacity: 100%;
+}
