@@ -1,3 +1,5 @@
+/* Import Fonts From Google Fonts */
+
 @import url('https://fonts.googleapis.com/css?family=Domine:400,700|Roboto:300,400');
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -51,10 +53,238 @@ table {
 
 * {
     box-sizing: border-box;
-    max-width: 100%;
-    /* border: 1px solid gray;  LAYOUT ASSISTANCE BORDER */
+	max-width: 100%;
+    border: 1px solid gray;  /*LAYOUT ASSISTANCE BORDER */
 }
 
 html {
-    font-size: 62.5%;
+	
+	/* font-size: var(--body-font-size); */
+	font-size: 62.5%;
+	
+}
+
+/* CSS variable declarations */
+
+body {
+	--color-variant: white;
+	--nav-font-size: 2rem;
+	--nav-bg-color: #456990;
+	--body-color: #212529;
+	--body-font: Roboto, sans-serif;
+	--body-font-weight: 400;
+	--body-font-size: 1.7rem;
+	--body-line-height: 2.5rem;
+	--h1-color: #114B5F;
+	--h1-font: Domaine, serif;
+	--h1-font-weight: 700;
+	--h1-font-size: 3rem;  /* Updated from 4.4 in style guide */
+	--h1-line-height: 5rem;
+	--sub-head-color: #028090;
+	--sub-head-font: Domaine, serif;
+	--sub-head-font-weight: 400;
+	--sub-head-line-height: 2.5rem;
+	--h2-font-size: 3.2rem;
+	--h3-font-size: 2.4rem;
+	--btn-bg-color: #F45B69;
+	color: var(--body-color);
+	font-family: var(--body-font);
+	font-weight: var(--body-font-weight);
+	line-height: var(--body-line-height);
+}
+
+h1 {
+	color: var(--h1-color);
+	font-family: var(--h1-font);
+	font-weight: var(--h1-font-weigh);
+	font-size: var(--h1-font-size);
+	line-height: var(--h1-line-height);
+}
+
+h2, h3 {
+	color: var(--sub-head-color);
+	font-family: var(--sub-head-font);
+	font-weight: (--sub-head-font-weight);
+	line-height: var(--sub-head-line-height);
+}
+
+h2 {
+	font-size: var(--h2-font-size);
+}
+
+h3 {
+	font-size: var(--h3-font-size);
+}
+
+/* Page Container */
+
+.pageContainer {
+    width: 100%;
+	margin: 1% auto;
+}
+
+/* Hero Image */
+
+.heroImageContainer {
+	height: 80vh;
+	background-image: url('https://images.unsplash.com/photo-1457030642598-b037296c9296?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+/* Page Header */
+
+header {
+	width: 100%;
+	height: 10vh;
+	background-color: var(--nav-bg-color);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header a {
+	color: var(--color-variant);
+	text-decoration: none;
+}
+
+.logo {
+	width: 30%;
+	margin: 1%;
+}
+
+nav {
+	width: 40%;
+	display: flex;
+	justify-content: flex-end;
+	margin: 1%;
+}
+
+nav a {
+	width: 100%;
+	margin: 1%;
+	font-size: var(--nav-font-size);
+	text-align: center;
+	font-variant: small-caps;
+}
+
+
+/* Page Title Container */
+
+main {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 2%;
+}
+
+.pageTitle {
+	width: 50%;
+	padding: 3%;
+	flex-direction: column;
+	align-content: center;
+}
+
+.pageTitle div {
+	margin: 3%;
+}
+
+.pageTitle h1 {
+/* text-align: center; */
+margin-bottom: 4%;
+}
+
+.titleImage {
+	width: 50%;
+	display: flex;
+	align-items: center;
+}
+
+.cta div {
+	height: 25vh;
+	width: 80%;
+	display: flex;
+	align-items: center;
+}
+
+.cta a {
+	color: var(--color-variant);
+	font-size: var(--nav-font-size);
+	/* width: 20%; */
+	background-color: var(--btn-bg-color);
+	border-radius: 7px;
+	letter-spacing: 1px;
+	font-variant: small-caps;
+	text-decoration: none;
+	padding: 2% 3%;
+	margin: 4% 0;
+}
+
+p {
+	font-size: var(--body-font-size);
+	font-weight: var(--body-font-weight);
+	line-height: var(--body-line-height);
+}
+
+/* Testimonial Container */
+
+.testimonials {
+	display: flex;
+	justify-content: space-evenly;
+	margin: 4% 0;
+}
+
+.testimonialBlock {
+	height: 30vh;
+	width: 28%;
+	color: var(--color-variant);
+	background-color: var(--sub-head-color);
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 3% 2%;
+}
+
+.testimonialBlock h3 {
+	color: var(--color-variant);
+	margin: 10% 0;	
+}
+
+/* Footer Container Styles */
+
+footer {
+	width: 100%;
+	height: 30vh;
+	background-color: var(--nav-bg-color);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+footer div {
+	width: 80%;
+	/* margin: 3% 0; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+footer h2 {
+	/* width: 80%; */
+	color: var(--color-variant);
+}
+
+footer a {
+	color: var(--color-variant);
+	font-size: var(--nav-font-size);
+	/* background-color: var(--btn-bg-color); */
+	border: 2px solid var(--color-variant);
+	border-radius: 7px;
+	letter-spacing: 1px;
+	font-variant: small-caps;
+	text-decoration: none;
+	padding: 2% 3%;
+	margin: 2% 0;
 }
