@@ -105,6 +105,11 @@ body{
     width: 70rem;
 }
 
+.sidebar__user:hover {
+    transform: scale(1.1);
+    transition-duration: 200ms;
+}
+
 .sidebar__image {
     border-radius: 100%;
 }
@@ -145,6 +150,14 @@ body{
     justify-content: space-around;
     align-items: center;
     background-color: var(--section-bk-color);
+}
+
+.stack__card:hover {
+    opacity: 100%;
+    transform: translate(0, -10px);
+    transition-duration: 300ms;
+    background-color: var(--title-second-color);
+    color: var(--section-bk-color);
 }
 
 .stack__card__title {
@@ -209,6 +222,12 @@ body{
 
 .button--se{
     background-color: var(--section-bk-color);
+}
+
+.button:hover {
+    transform: translate(0, -5px);
+    box-shadow: 3px 3px lightgray;
+    transition-duration: 500ms;
 }
 
 /* ----- Media query ----- */

@@ -83,7 +83,11 @@
 
 .gallery__image:hover {
     opacity: 100%;
+    transform: translate(0, -15px) scale(1.2);
+    transition-duration: 500ms;
 }
+
+
 
 /* ----- Media query ----- */
 

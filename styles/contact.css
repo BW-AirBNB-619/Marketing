@@ -1,1 +1,28 @@
 /* ----- contact page ----- */
+
+.contact {
+    height: 80vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) ), url("../contact/Asset/contact-bk.jpg");
+    background-position: center;
+}
+
+.contact__form {
+    line-height: 5rem;
+    padding: 5rem;
+    background-color:rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: 2px 2px lightgray;
+}
+
+.contact__title {
+    color: var(--title-main-color);
+    text-align: center;
+}
+
+.contact__footer {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.9) ), url("../contact/Asset/contact-bk.jpg");
+        background-position: bottom;
+}
