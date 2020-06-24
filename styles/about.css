@@ -107,7 +107,7 @@ body{
 
 .sidebar__user:hover {
     transform: scale(1.1);
-    transition-duration: 200ms;
+    transition-duration: 400ms;
 }
 
 .sidebar__image {
