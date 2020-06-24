@@ -153,7 +153,9 @@ body{
 }
 
 .stack__card__body {
-    padding: 2rem;
+    padding: 1rem;
+    text-align: justify;
+    height: 18rem;
 }
 
 .stack__card__image {
