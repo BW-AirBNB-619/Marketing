@@ -130,11 +130,13 @@ h3 {
 /* Hero Image */
 
 .heroImageContainer {
-	height: 80vh;
-	background-image: url('https://images.unsplash.com/photo-1457030642598-b037296c9296?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+	width: 100%;
+	background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9) ), url("../photo/Asset/card-bk.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top;
+	background-position: top;
+	padding-bottom: 20px 0;
+	margin-bottom: 20px;
 }
 
 /* Page Header */
@@ -148,6 +150,7 @@ header {
 	align-items: center;
 	padding: 2rem 0;
 	margin-bottom: 3rem;
+	
 }
 
 header a {
@@ -189,7 +192,7 @@ main {
 }
 
 .pageTitle {
-	width: 50%;
+	width: 45%;
 	/* height: 100%; */
 	padding: 3%;
 	flex-direction: column;
@@ -197,7 +200,7 @@ main {
 }
 
 .pageTitle div {
-	margin-bottom: 5rem;
+	/* margin-bottom: 5rem; */
 }
 
 .pageTitle h1 {
@@ -206,26 +209,30 @@ main {
 }
 
 .titleImage {
-	width: 50%;
+	width: 40%;
 	display: flex;
 	align-items: center;
+	margin-bottom: 30px;
 }
 
-.cta div {
+.cta {
 	/* height: 25vh; */
-	width: 80%;
-	/* margin: 45px 0; */
+	width: 100%;
+	/* padding: 45px 0; */
+	margin: 45px 0;
 	display: flex;
 	align-items: center;
 }
 
 .cta a {
+	width: 25%;
 	color: var(--color-variant);
 	font-size: var(--nav-font-size);
 	/* width: 20%; */
 	background-color: var(--btn-bg-color);
 	border-radius: 7px;
 	letter-spacing: 1px;
+	text-align: center;
 	font-variant: small-caps;
 	text-decoration: none;
 	padding: 2% 3%;
@@ -257,6 +264,10 @@ p {
 	flex-direction: column;
 	justify-content: flex-end;
 	padding: 3% 2%;
+}
+
+.testimonialBlock img {
+	border-radius: 50%;
 }
 
 .testimonialBlock h3 {
@@ -418,5 +429,20 @@ footer a {
 	.teamContentBlock {
 		width: 100%;
 		align-items: center;
+	}
+
+	.testimonials {
+		width: 100%;
+		flex-wrap: wrap;
+	}
+
+	.testimonialBlock {
+		/* flex-wrap: wrap; */
+		width: 60%;
+		margin-bottom: 20px;
+	}
+
+	.testimonialBlock img {
+		border-radius: 50%;
 	}
 }
