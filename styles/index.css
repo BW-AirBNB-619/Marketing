@@ -2,6 +2,30 @@
 
 @import url('https://fonts.googleapis.com/css?family=Domine:400,700|Roboto:300,400');
 
+/* CSS variable declarations */
+:root {
+	--color-variant: white;
+	--nav-font-size: 2rem;
+	--nav-bg-color: #456990;
+	--body-color: #212529;
+	--body-font: Roboto, sans-serif;
+	--body-font-weight: 400;
+	--body-font-size: 1.7rem;
+	--body-line-height: 2.5rem;
+	--h1-color: #114B5F;
+	--h1-font: Domaine, serif;
+	--h1-font-weight: 700;
+	--h1-font-size: 3rem;  /* Updated from 4.4 in style guide */
+	--h1-line-height: 5rem;
+	--sub-head-color: #028090;
+	--sub-head-font: Domaine, serif;
+	--sub-head-font-weight: 400;
+	--sub-head-line-height: 2.5rem;
+	--h2-font-size: 3.2rem;
+	--h3-font-size: 2.4rem;
+	--btn-bg-color: #F45B69;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -54,7 +78,7 @@ table {
 * {
     box-sizing: border-box;
 	max-width: 100%;
-    border: 1px solid gray;  /*LAYOUT ASSISTANCE BORDER */
+    /* border: 1px solid gray;  /*LAYOUT ASSISTANCE BORDER */
 }
 
 html {
@@ -64,34 +88,14 @@ html {
 	
 }
 
-/* CSS variable declarations */
-
 body {
-	--color-variant: white;
-	--nav-font-size: 2rem;
-	--nav-bg-color: #456990;
-	--body-color: #212529;
-	--body-font: Roboto, sans-serif;
-	--body-font-weight: 400;
-	--body-font-size: 1.7rem;
-	--body-line-height: 2.5rem;
-	--h1-color: #114B5F;
-	--h1-font: Domaine, serif;
-	--h1-font-weight: 700;
-	--h1-font-size: 3rem;  /* Updated from 4.4 in style guide */
-	--h1-line-height: 5rem;
-	--sub-head-color: #028090;
-	--sub-head-font: Domaine, serif;
-	--sub-head-font-weight: 400;
-	--sub-head-line-height: 2.5rem;
-	--h2-font-size: 3.2rem;
-	--h3-font-size: 2.4rem;
-	--btn-bg-color: #F45B69;
 	color: var(--body-color);
 	font-family: var(--body-font);
 	font-weight: var(--body-font-weight);
 	line-height: var(--body-line-height);
 }
+
+
 
 h1 {
 	color: var(--h1-color);
@@ -120,7 +124,7 @@ h3 {
 
 .pageContainer {
     width: 100%;
-	margin: 1% auto;
+	margin: 0 auto;
 }
 
 /* Hero Image */
@@ -142,6 +146,7 @@ header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-bottom: 30px;
 }
 
 header a {
@@ -173,25 +178,27 @@ nav a {
 /* Page Title Container */
 
 main {
+	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
-	margin: 2%;
+	/* margin: 2%; */
 }
 
 .pageTitle {
 	width: 50%;
+	/* height: 100%; */
 	padding: 3%;
 	flex-direction: column;
 	align-content: center;
 }
 
 .pageTitle div {
-	margin: 3%;
+	margin-bottom: 5rem;
 }
 
 .pageTitle h1 {
 /* text-align: center; */
-margin-bottom: 4%;
+/* margin-bottom: 4%; */
 }
 
 .titleImage {
@@ -201,8 +208,9 @@ margin-bottom: 4%;
 }
 
 .cta div {
-	height: 25vh;
+	/* height: 25vh; */
 	width: 80%;
+	/* margin: 45px 0; */
 	display: flex;
 	align-items: center;
 }
@@ -217,13 +225,14 @@ margin-bottom: 4%;
 	font-variant: small-caps;
 	text-decoration: none;
 	padding: 2% 3%;
-	margin: 4% 0;
+	/* margin: 300px 0; */
 }
 
 p {
 	font-size: var(--body-font-size);
 	font-weight: var(--body-font-weight);
 	line-height: var(--body-line-height);
+	/* margin-bottom: 2rem; */
 }
 
 /* Testimonial Container */
@@ -249,6 +258,43 @@ p {
 .testimonialBlock h3 {
 	color: var(--color-variant);
 	margin: 10% 0;	
+}
+
+/* Team Profiles Container */
+
+section {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 3rem;
+}
+
+.teamContentBlock {
+	width: 60%;
+	margin: 20px auto;
+	display: flex;
+}
+
+.headshot {
+	width: 40%;
+	margin-right: 3rem;
+}
+
+.teamContentBlock img {
+	border-radius: 10px;
+	/* margin-right: 20px; */
+}
+
+.bio, h2{
+	margin-bottom: 1.5rem;
+}
+
+.bio, h3{
+	margin-bottom: 2.5rem;
+}
+
+.bio, p {
+	/* width: 20rem; */
 }
 
 /* Footer Container Styles */
@@ -285,6 +331,7 @@ footer a {
 	letter-spacing: 1px;
 	font-variant: small-caps;
 	text-decoration: none;
-	padding: 2% 3%;
+	padding: 1.5% 2%;
 	margin: 2% 0;
 }
+
