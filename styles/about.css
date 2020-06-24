@@ -61,62 +61,73 @@ body{
 .main-nav__link {
   text-decoration: none;
   color: #f8f9faff;
-  margin-left: 5rem;
-  
+  padding:2rem;
+}
+.main-nav__link:last-child {
+    padding-right: 0;
 }
 
-/* ----- Card section ----- */
+/* ----- hero ----- */
 
-.card {
-    font-size: 1.6rem;
-    display: flex;
+.hero {
     height: 50rem;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9) ), url("../photo/Asset/card-bk.jpg");
-}
-
-.card__body {
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 5rem 0;
-}
-
-.card__title{
-    font-size: 3rem;
-    text-transform: uppercase;
-    font-family: 'Domine', sans-serif;
-    font-weight: 700;
-    color: var(--title-main-color);
-    text-align: center;
-}
-
-.card__action {
-    text-align: center;
-}
-
-.card__copy {
-    padding: 0 5rem;
-    text-align: justify;
-    line-height: 2rem;
-}
-
-.card__figure {
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.9) ), url("../photo/Asset/hero-bk.jpg");
     position: relative;
-    min-width: 60%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.card__image {
-    max-width: 60%;
-    display: block;
-    border-radius: 20px;
-    position: absolute;
+.hero__title{
+    font-size: 3rem;
+    color: var(--title-main-color);
+    padding: 2rem;
+    background-color: #f8f9fa94;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
 }
 
-.card__image__1 {top: 45%; left: 30%; z-index: 18; }
-.card__image__2 {top: 25%; left: 5%; z-index: 15; }
-.card__image__3 {top: 15%; left: 35%; z-index: 10; }
+/* ----- sidebar ----- */
 
+.sidebar{
+    margin-top: 5rem;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar__user {
+    display: flex;
+    align-items: center;
+    width: 70rem;
+}
+
+.sidebar__user:hover {
+    transform: scale(1.1);
+    transition-duration: 400ms;
+}
+
+.sidebar__image {
+    border-radius: 100%;
+}
+
+.sidebar__list {
+    margin: 3rem;
+}
+
+.sidebar__name {
+    text-transform: capitalize;
+    color:var(--title-main-color);
+    font-weight: 400;
+    padding: 1rem 0;
+}
+
+.sidebar__comment {
+    font-style: italic;
+}
 
 
 /* ----- Features section ----- */
@@ -141,52 +152,30 @@ body{
     background-color: var(--section-bk-color);
 }
 
+.stack__card:hover {
+    opacity: 100%;
+    transform: translate(0, -10px);
+    transition-duration: 300ms;
+    background-color: var(--title-second-color);
+    color: var(--section-bk-color);
+}
+
 .stack__card__title {
     font-size: 1.8rem;
     text-transform: uppercase;
 }
 
 .stack__card__body {
-    padding: 2rem;
+    padding: 1rem;
+    text-align: justify;
+    height: 18rem;
 }
 
 .stack__card__image {
     width: 150px;
 }
 
-/* ----- sidebar ----- */
 
-.sidebar{
-    margin-top: 5rem;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.sidebar__user {
-    display: flex;
-    align-items: center;
-    width: 70rem;
-}
-
-.sidebar__image {
-    border-radius: 100%;
-}
-
-.sidebar__list {
-    margin: 3rem;
-}
-
-.sidebar__name {
-    text-transform: capitalize;
-    color:var(--title-main-color);
-    font-weight: 400;
-    padding: 1rem 0;
-}
-
-.sidebar__comment {
-    font-style: italic;
-}
 
 /* ----- Footer section -----*/
 
@@ -235,3 +224,53 @@ body{
     background-color: var(--section-bk-color);
 }
 
+.button:hover {
+    transform: translate(0, -5px);
+    box-shadow: 3px 3px lightgray;
+    transition-duration: 500ms;
+}
+
+/* ----- Media query ----- */
+
+@media(max-width:800px) {
+
+    .main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main__title{
+        margin: 2rem 0;
+    }
+
+    .main-nav__list {
+        flex-direction: column;
+    }
+
+    .main-nav__item {
+        padding: 2rem 0;
+    }
+}
+
+@media(max-width:500px) {
+
+
+
+    .sidebar__user {
+        width: 40rem;
+        flex-direction: column;
+    }
+
+    .sidebar__name {
+        text-align: center;
+    }
+
+    .stack {
+        flex-direction: column;
+    }
+
+    .stack__card {
+        max-width: 40rem;
+    }
+}

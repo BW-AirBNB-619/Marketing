@@ -141,12 +141,13 @@ h3 {
 
 header {
 	width: 100%;
-	height: 10vh;
+	/* height: 10vh; */
 	background-color: var(--nav-bg-color);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-bottom: 30px;
+	padding: 2rem 0;
+	margin-bottom: 3rem;
 }
 
 header a {
@@ -155,6 +156,9 @@ header a {
 }
 
 .logo {
+	font-size: var(--h3-font-size);
+	font-family: var(--sub-head-font);
+	color: var(--color-variant);
 	width: 30%;
 	margin: 1%;
 }
@@ -244,7 +248,7 @@ p {
 }
 
 .testimonialBlock {
-	height: 30vh;
+	/* height: 30vh; */
 	width: 28%;
 	color: var(--color-variant);
 	background-color: var(--sub-head-color);
@@ -264,25 +268,40 @@ p {
 
 section {
 	width: 100%;
-	display: flex;
-	justify-content: center;
 	margin-top: 3rem;
 }
 
-.teamContentBlock {
-	width: 60%;
-	margin: 20px auto;
+.team {
+	width: 80%;
+	margin: 0 auto;
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	justify-content: center;
+}
+
+.teamContentBlock {
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	
 }
 
 .headshot {
-	width: 40%;
-	margin-right: 3rem;
+	width: 300px;
+	margin-bottom: 2rem;
+	
 }
 
-.teamContentBlock img {
+.headshot img {
+	width: 100%;
 	border-radius: 10px;
+	border: 1px solid var(--body-color);
 	/* margin-right: 20px; */
+}
+
+.bio {
+	width: 300px;
 }
 
 .bio, h2{
@@ -335,3 +354,69 @@ footer a {
 	margin: 2% 0;
 }
 
+/* Media Queries 1000px */
+
+@media(max-width: 1000px) {
+	.logo {
+		width: 40%;
+	}
+	
+	.teamContentBlock {
+		width: 45%;
+		align-items: center;
+	}
+}
+
+/* Media Queries 800px */
+
+@media(max-width: 800px) {
+	.team {
+		width: 100%;
+	}
+	.teamContentBlock {
+		width: 40%;
+		align-items: center;
+	}
+}
+
+/* Media Queries 500px */
+
+@media(max-width: 500px) {
+	header {
+		/* height: 35vh; */
+		flex-direction: column;
+	}
+	.logo {
+		width: 100%;
+		text-align: center;
+	}
+	nav {
+		width: 100%;
+	}
+	
+	main {
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+	}
+	
+	.titleImage {
+		width: 80%;
+		order: -1;
+		margin: 1.5rem auto;
+	}
+
+	.pageTitle {
+		width: 80%;
+		margin: 1.5rem auto;
+	}
+
+	.pageTitle h1 {
+		font-size: 2.5rem;
+		}
+	
+	.teamContentBlock {
+		width: 100%;
+		align-items: center;
+	}
+}
