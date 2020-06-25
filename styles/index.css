@@ -1,6 +1,30 @@
 /* Import Fonts From Google Fonts */
 
-@import url('https://fonts.googleapis.com/css?family=Domine:400,700|Roboto:300,400');
+@import url('https://fonts.googleapis.com/css?family=Domine:400,700|Roboto:ital,wght@0,300;0,400;1,400');
+
+/* CSS variable declarations */
+:root {
+	--color-variant: white;
+	--nav-font-size: 2rem;
+	--nav-bg-color: #456990;
+	--body-color: #212529;
+	--body-font: Roboto, sans-serif;
+	--body-font-weight: 400;
+	--body-font-size: 1.7rem;
+	--body-line-height: 2.5rem;
+	--h1-color: #114B5F;
+	--h1-font: Domaine, serif;
+	--h1-font-weight: 700;
+	--h1-font-size: 3rem;  /* Updated from 4.4 in style guide */
+	--h1-line-height: 5rem;
+	--sub-head-color: #028090;
+	--sub-head-font: Domaine, serif;
+	--sub-head-font-weight: 400;
+	--sub-head-line-height: 2.5rem;
+	--h2-font-size: 3.2rem;
+	--h3-font-size: 2.4rem;
+	--btn-bg-color: #F45B69;
+}
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -54,7 +78,7 @@ table {
 * {
     box-sizing: border-box;
 	max-width: 100%;
-    border: 1px solid gray;  /*LAYOUT ASSISTANCE BORDER */
+    /* border: 1px solid gray;  /*LAYOUT ASSISTANCE BORDER */
 }
 
 html {
@@ -64,34 +88,14 @@ html {
 	
 }
 
-/* CSS variable declarations */
-
 body {
-	--color-variant: white;
-	--nav-font-size: 2rem;
-	--nav-bg-color: #456990;
-	--body-color: #212529;
-	--body-font: Roboto, sans-serif;
-	--body-font-weight: 400;
-	--body-font-size: 1.7rem;
-	--body-line-height: 2.5rem;
-	--h1-color: #114B5F;
-	--h1-font: Domaine, serif;
-	--h1-font-weight: 700;
-	--h1-font-size: 3rem;  /* Updated from 4.4 in style guide */
-	--h1-line-height: 5rem;
-	--sub-head-color: #028090;
-	--sub-head-font: Domaine, serif;
-	--sub-head-font-weight: 400;
-	--sub-head-line-height: 2.5rem;
-	--h2-font-size: 3.2rem;
-	--h3-font-size: 2.4rem;
-	--btn-bg-color: #F45B69;
 	color: var(--body-color);
 	font-family: var(--body-font);
 	font-weight: var(--body-font-weight);
 	line-height: var(--body-line-height);
 }
+
+
 
 h1 {
 	color: var(--h1-color);
@@ -120,28 +124,33 @@ h3 {
 
 .pageContainer {
     width: 100%;
-	margin: 1% auto;
+	margin: 0 auto;
 }
 
 /* Hero Image */
 
 .heroImageContainer {
-	height: 80vh;
-	background-image: url('https://images.unsplash.com/photo-1457030642598-b037296c9296?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80');
+	width: 100%;
+	background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9) ), url("../photo/Asset/card-bk.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top;
+	background-position: top;
+	padding-bottom: 20px 0;
+	margin-bottom: 20px;
 }
 
 /* Page Header */
 
 header {
 	width: 100%;
-	height: 10vh;
+	/* height: 10vh; */
 	background-color: var(--nav-bg-color);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	padding: 2rem 0;
+	margin-bottom: 3rem;
+	
 }
 
 header a {
@@ -150,6 +159,9 @@ header a {
 }
 
 .logo {
+	font-size: var(--h3-font-size);
+	font-family: var(--sub-head-font);
+	color: var(--color-variant);
 	width: 30%;
 	margin: 1%;
 }
@@ -173,57 +185,66 @@ nav a {
 /* Page Title Container */
 
 main {
+	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
-	margin: 2%;
+	justify-content: center;
+	/* margin: 2%; */
 }
 
 .pageTitle {
-	width: 50%;
+	width: 45%;
+	/* height: 100%; */
 	padding: 3%;
 	flex-direction: column;
 	align-content: center;
 }
 
 .pageTitle div {
-	margin: 3%;
+	/* margin-bottom: 5rem; */
 }
 
 .pageTitle h1 {
 /* text-align: center; */
-margin-bottom: 4%;
+/* margin-bottom: 4%; */
 }
 
 .titleImage {
-	width: 50%;
+	width: 40%;
 	display: flex;
 	align-items: center;
+	margin-bottom: 30px;
 }
 
-.cta div {
-	height: 25vh;
-	width: 80%;
+.cta {
+	/* height: 25vh; */
+	width: 100%;
+	/* padding: 45px 0; */
+	margin: 45px 0;
 	display: flex;
 	align-items: center;
 }
 
 .cta a {
+	width: 35%;
 	color: var(--color-variant);
 	font-size: var(--nav-font-size);
 	/* width: 20%; */
 	background-color: var(--btn-bg-color);
 	border-radius: 7px;
 	letter-spacing: 1px;
+	text-align: center;
 	font-variant: small-caps;
 	text-decoration: none;
 	padding: 2% 3%;
-	margin: 4% 0;
+	/* margin: 300px 0; */
 }
 
 p {
 	font-size: var(--body-font-size);
 	font-weight: var(--body-font-weight);
 	line-height: var(--body-line-height);
+	/* margin-bottom: 2rem; */
 }
 
 /* Testimonial Container */
@@ -235,7 +256,7 @@ p {
 }
 
 .testimonialBlock {
-	height: 30vh;
+	/* height: 30vh; */
 	width: 28%;
 	color: var(--color-variant);
 	background-color: var(--sub-head-color);
@@ -246,9 +267,69 @@ p {
 	padding: 3% 2%;
 }
 
+.testimonialBlock img {
+	border-radius: 50%;
+}
+
 .testimonialBlock h3 {
 	color: var(--color-variant);
 	margin: 10% 0;	
+}
+
+.italic {
+	font-style: italic;
+}
+
+/* Team Profiles Container */
+
+section {
+	width: 100%;
+	margin-top: 3rem;
+}
+
+.team {
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	justify-content: center;
+}
+
+.teamContentBlock {
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+	
+}
+
+.headshot {
+	width: 300px;
+	margin-bottom: 2rem;
+	
+}
+
+.headshot img {
+	width: 100%;
+	border-radius: 10px;
+	border: 1px solid var(--body-color);
+	/* margin-right: 20px; */
+}
+
+.bio {
+	width: 300px;
+}
+
+.bio, h2{
+	margin-bottom: 1.5rem;
+}
+
+.bio, h3{
+	margin-bottom: 2.5rem;
+}
+
+.bio, p {
+	/* width: 20rem; */
 }
 
 /* Footer Container Styles */
@@ -285,6 +366,92 @@ footer a {
 	letter-spacing: 1px;
 	font-variant: small-caps;
 	text-decoration: none;
-	padding: 2% 3%;
+	padding: 1.5% 2%;
 	margin: 2% 0;
+}
+
+/* Media Queries 1000px */
+
+@media(max-width: 1000px) {
+	.logo {
+		width: 40%;
+	}
+	
+	.teamContentBlock {
+		width: 45%;
+		align-items: center;
+	}
+}
+
+/* Media Queries 800px */
+
+@media(max-width: 800px) {
+	.team {
+		width: 100%;
+	}
+	.teamContentBlock {
+		width: 40%;
+		align-items: center;
+	}
+}
+
+/* Media Queries 500px */
+
+@media(max-width: 500px) {
+	header {
+		/* height: 35vh; */
+		flex-direction: column;
+	}
+	.logo {
+		width: 100%;
+		text-align: center;
+	}
+	nav {
+		width: 100%;
+	}
+	
+	main {
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+	}
+	
+	.titleImage {
+		width: 80%;
+		order: -1;
+		margin: 1.5rem auto;
+	}
+
+	.pageTitle {
+		width: 80%;
+		margin: 1.5rem auto;
+	}
+
+	.cta {
+		justify-content: center;
+	}
+
+	.pageTitle h1 {
+		font-size: 2.5rem;
+		}
+	
+	.teamContentBlock {
+		width: 100%;
+		align-items: center;
+	}
+
+	.testimonials {
+		width: 100%;
+		flex-wrap: wrap;
+	}
+
+	.testimonialBlock {
+		/* flex-wrap: wrap; */
+		width: 60%;
+		margin-bottom: 20px;
+	}
+
+	.testimonialBlock img {
+		border-radius: 50%;
+	}
 }
