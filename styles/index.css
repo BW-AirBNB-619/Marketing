@@ -1,6 +1,6 @@
 /* Import Fonts From Google Fonts */
 
-@import url('https://fonts.googleapis.com/css?family=Domine:400,700|Roboto:300,400');
+@import url('https://fonts.googleapis.com/css?family=Domine:400,700|Roboto:ital,wght@0,300;0,400;1,400');
 
 /* CSS variable declarations */
 :root {
@@ -188,6 +188,7 @@ main {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: center;
 	/* margin: 2%; */
 }
 
@@ -273,6 +274,10 @@ p {
 .testimonialBlock h3 {
 	color: var(--color-variant);
 	margin: 10% 0;	
+}
+
+.italic {
+	font-style: italic;
 }
 
 /* Team Profiles Container */
@@ -420,6 +425,10 @@ footer a {
 	.pageTitle {
 		width: 80%;
 		margin: 1.5rem auto;
+	}
+
+	.cta {
+		justify-content: center;
 	}
 
 	.pageTitle h1 {
