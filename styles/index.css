@@ -226,7 +226,7 @@ main {
 }
 
 .cta a {
-	width: 25%;
+	width: 35%;
 	color: var(--color-variant);
 	font-size: var(--nav-font-size);
 	/* width: 20%; */
